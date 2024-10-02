@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Level</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=8d5GBHpQwZz1&format=png&color=000000" type="image/x-icon">
+</head>
+<body>
+    <div class="game">
+        <img src="Nutri-Quest.jpg" alt="Board Game">
+        <!-- These are the 4 pawns (divs) -->
+        <div class="pawn" id="pawn1"><img src="../sprites/Apple.jpeg" alt=""></div>
+        <div class="pawn" id="pawn2"><img src="../sprites/Capsicum.PNG" alt=""></div>
+        <div class="pawn" id="pawn3"><img src="../sprites/Mushroom (1).PNG" alt=""></div>
+        <div class="pawn" id="pawn4"><img src="../sprites/Watermelon.jpeg" alt=""></div>
+    </div>
+
+    <!-- Buttons for Nutri-Cards and Promise Cards -->
+    <div class="button-container">
+        <a href="instructions.html" target="_blank"><button id="instructions">Instructions</button></a>
+        <button id="nutriBtn">Nutri-Cards</button>
+        <button id="promiseBtn">Promise Cards</button>
+        <!-- Dice Roll Button and Result Display -->
+        <button id="rollDiceBtn">Roll Dice</button>
+            <div id="diceResult">
+                <!-- Dice result will be displayed here -->
+            </div>
+        
+    </div>
+
+    <!-- Modal to display the randomly picked image -->
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="cardImage" src="" alt="Card Image">
+        </div>
+    </div>
+
+    <!-- <audio autoplay loop hidden>
+        <source src="../bgd-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> -->
+
+    <script src="script.js"></script> <!-- Link to external JS file -->
+</body>
+</html>

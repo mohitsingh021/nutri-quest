@@ -1,0 +1,101 @@
+@font-face {
+      font-family: 'MyFont';
+      src: url('fonts/Marykate\ Regular.otf') format('opentype'),
+           url('fonts/Marykate\ Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+  }
+/* Reset default margins and paddings */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'MyFont', sans-serif;
+  }
+  
+  /* Body takes full viewport height */
+  body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+  }
+  
+  /* Container for header and main */
+  .container {
+      display: flex;
+      flex-direction: row; /* Stack header and main side by side (horizontally) */
+      flex: 1; /* Make container take full remaining height of the body */
+  }
+  
+  /* Header styling */
+  /* Header styling with restricted image size */
+header {
+      flex: 1; /* Take 50% of the width */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      /* padding: 20px; */
+      overflow: hidden; /* Prevent content overflow */
+  }
+  
+  /* Image inside the header */
+  header img {
+      max-width: 100%; /* Make sure the image doesn't exceed the width of the header */
+      /* max-height: 100px; You can adjust the height as needed */
+      height: auto;
+      width: auto;
+      /* object-fit: contain; Ensure the image scales proportionally */
+  }
+  
+  
+  /* Main section styling */
+  main {
+      flex: 1; /* Take 50% of the width */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      padding: 20px;
+      text-align: center;
+      background-color: #fffdd0;
+      font-size: 25px;
+  }
+  
+  /* Button styling */
+  button.level {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 25px;
+  }
+  
+  button.level:hover {
+      background-color: #45a049;
+  }
+  
+  /* Footer styling */
+  footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%; /* Full width of the screen */
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      z-index: 1; /* Ensure it overlaps the header and main sections */
+      font-size: 25px;
+  }
+  
+  /* Ensure footer text is visible when it overlaps the content */
+  footer p {
+      margin: 5px;
+  }
+  
