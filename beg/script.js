@@ -135,3 +135,36 @@ function rollDice() {
 
 // Add an event listener to the button
 rollDiceBtn.addEventListener('click', rollDice);
+
+// Function to play sound
+function playSound(audioFile) {
+    let audio = new Audio(audioFile);
+    audio.play();
+}
+
+// Add event listeners to buttons
+document.addEventListener("DOMContentLoaded", function () {
+    // Nutri Card Button
+    const nutriCardBtn = document.getElementById("nutriBtn");
+    if (nutriCardBtn) {
+        nutriCardBtn.addEventListener("click", function () {
+            playSound("../sounds/nutri-card.mp3"); // Adjust path as needed
+        });
+    }
+
+    // Promise Card Button
+    const promiseCardBtn = document.getElementById("promiseBtn");
+    if (promiseCardBtn) {
+        promiseCardBtn.addEventListener("click", function () {
+            playSound("../sounds/promise-card.mp3");
+        });
+    }
+
+    // Roll Dice Button
+    const rollDiceBtn = document.getElementById("rollDiceBtn");
+    if (rollDiceBtn) {
+        rollDiceBtn.addEventListener("click", function () {
+            playSound("../sounds/dice-roll.mp3");
+        });
+    }
+});
